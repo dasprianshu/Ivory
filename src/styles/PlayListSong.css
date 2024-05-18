@@ -1,6 +1,7 @@
 .playlistsong {
   background-color: var(--songBgColor);
   display: flex;
+  flex-direction: row;
   padding: 0.5rem;
   align-items: center;
   border-radius: 3px;
@@ -12,6 +13,13 @@
 .playlistsong:hover,
 .playing-song {
   background-color: var(--songHoverBgColor);
+}
+
+.playlistsong_group{
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  user-select: none;
 }
 
 .playlistsong__img {
@@ -41,6 +49,7 @@
 
 .playlistsong__optionsIcon {
   color: rgb(158, 158, 158) !important;
+  /* padding: 8px !important; */
 }
 
 .playlistsong__optionsIcon:hover {

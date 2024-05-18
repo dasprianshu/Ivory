@@ -49,7 +49,7 @@ function ArtistPage() {
           <div className="artistpage__headerInfoText">
             <Typography variant="h4">{artist?.name}</Typography>
 
-            <Typography variant="subtitle2">{artist?.description}</Typography>
+            <Typography variant="subtitle2" >{artist?.description}</Typography>
           </div>
         </div>
 

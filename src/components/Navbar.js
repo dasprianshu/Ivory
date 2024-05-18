@@ -49,7 +49,7 @@ function Navbar() {
     <div className="navbar">
       <img
         className="navbar__logo"
-        src="https://firebasestorage.googleapis.com/v0/b/octave-a6df7.appspot.com/o/mstile-150x150.png?alt=media&token=5858428b-51ca-43ad-aed9-5f107ef8d8d1"
+        src="https://raw.githubusercontent.com/dasprianshu/Ivory/fee73f679d42f5382c91f15beb35634e7ce6f4fb/public/favicon.ico"
         alt="App Logo"
         onDoubleClick={() => navigate("/admin")}
       />

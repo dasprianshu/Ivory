@@ -18,7 +18,7 @@ const AllSongs = () => {
     if (newReleases.length < 8) return;
     setLoading(true);
     // fetch songs after 7th song in NewReleases
-    const lastSongCreateAt = newReleases[7].data.createdAt;
+    const lastSongCreateAt = newReleases[0].data.createdAt; //"changed it to list all songs"
     getPaginatedSongs(lastSongCreateAt, LIMIT).then((snapshot) => {
       const resSongs = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -65,7 +65,7 @@ const AllSongs = () => {
   return (
     <div className="row user-select-none">
       <div className="row__headerText">
-        <h2>Songs</h2>
+        <h2>All Songs</h2>
       </div>
 
       <div className="allsongs__container">

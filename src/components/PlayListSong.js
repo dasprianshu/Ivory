@@ -5,7 +5,9 @@ import AddPlayListSongModal from "./AddPlayListSongModal";
 
 import { IconButton, Menu, MenuItem } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+// import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from "@material-ui/icons/Delete";
 
 import useSongFunctions from "../hooks/useSongFunctions";
@@ -52,37 +54,54 @@ function PlayListSong({
     <div
       className={isPlayingSong ? "playlistsong playing-song" : "playlistsong"}
     >
-      <img src={data.imageUrl} alt="" className="playlistsong__img" />
-      <div className="playlistsong__info">
-        <p className="playlistsong__infoName" title={data.name}>
-          {data.name}
-        </p>
-        <p className="playlistsong__infoArtist" title={data.artist}>
-          {data.artist}
-        </p>
+      <div onClick={playSong} className="playlistsong_group">
+        <img src={data.imageUrl} alt="" className="playlistsong__img" />
+        <div className="playlistsong__info">
+          <p className="playlistsong__infoName" title={data.name}>
+            {data.name}
+          </p>
+          <p className="playlistsong__infoArtist" title={data.artist}>
+            {data.artist}
+          </p>
+        </div>
       </div>
+
       {/* If this is not the current playing */}
       {!isPlayingSong && (
         <div>
-          <IconButton className="playlistsong__optionsIcon" onClick={playSong}>
-            <PlayArrowIcon />
-          </IconButton>
           {/* if it is from SongList, show remove the button */}
           {fromSongList && (
-            <IconButton
-              className="playlistsong__optionsIcon"
-              onClick={removeSongFunc}
-            >
-              <DeleteIcon />
-            </IconButton>
+            <div className="playlistsong_group">
+              <IconButton className="playlistsong__optionsIcon" onClick={addToFavourites}>
+                <FavoriteIcon />
+              </IconButton>
+              <IconButton
+                className="playlistsong__optionsIcon"
+                onClick={removeSongFunc}
+              >
+                <DeleteIcon />
+              </IconButton>
+            </div>
           )}
         </div>
       )}
 
       <div className="playlistsong__options">
+        {isPlayingSong && fromSongList && (
+          <>
+            <IconButton className="playlistsong__optionsIcon" onClick={addToFavourites}>
+              <FavoriteIcon />
+            </IconButton>
+          </>
+        )}
+      </div>
+      <div className="playlistsong__options">
         {/* If this song is not from SongList Component then it is from PlaylistPage or ArtistPage or SearchPage so show the options (playnext,add to queue,add to Favaourites) */}
         {!fromSongList && (
-          <>
+          <div className="playlistsong_group">
+            <IconButton className="playlistsong__optionsIcon" onClick={addToQueue}>
+              <PlaylistAddIcon />
+            </IconButton>
             <IconButton
               className="playlistsong__optionsIcon"
               aria-controls="simple-menu"
@@ -136,7 +155,7 @@ function PlayListSong({
                 </div>
               )}
             </Menu>
-          </>
+          </div>
         )}
       </div>
 

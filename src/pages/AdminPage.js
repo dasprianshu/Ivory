@@ -10,7 +10,7 @@ function Admin() {
   return (
     <div className="admin">
       <div className="admin__wrapper">
-        <Paper square>
+        <Paper elevation={3} square={false}>
           <Tabs
             value={tab}
             onChange={(e, newValue) => setTab(newValue)}

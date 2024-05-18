@@ -4,16 +4,22 @@
 }
 
 .artistpage__header {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 .artistpage__headerInfo {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .artistpage__headerInfoText {
-  max-width: 500px;
+  max-width: 850px;
   margin-left: 0.5rem;
+  max-height: 30vh;
+  overflow: auto;
+  /* scrollbar-width: thin; */
+  scrollbar-color: rgb(87, 87, 87) rgb(35, 35, 35);
 }
 
 .artistpage__image {
@@ -21,13 +27,14 @@
   max-height: 150px;
   object-fit: cover;
   border-radius: 5px;
+  align-self: self-start;
 }
 
 .artistpage__songlist {
   margin-top: 1rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 1rem;
   padding-left: 1rem;
 }

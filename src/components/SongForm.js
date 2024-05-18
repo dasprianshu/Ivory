@@ -135,7 +135,7 @@ function SongForm() {
         />
       </div>
       <div className="admin__fromGroup" style={{ paddingTop: "0.5rem" }}>
-        <FormControl>
+        <FormControl fullWidth>
           <InputLabel htmlFor="artist" color="secondary">
             Artist
           </InputLabel>
