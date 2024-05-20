@@ -79,9 +79,11 @@ function Login() {
 
   return (
     <div className="login user-select-none">
-      <Typography variant="h1" color="secondary" align="center">
-        Ivory
-      </Typography>
+      
+      <img src="https://firebasestorage.googleapis.com/v0/b/ivory-7da2e.appspot.com/o/Ivory_logo.png?alt=media&token=f3ea5a13-af48-4b82-8177-02b5b8f405e6"
+        alt="App-Logo"
+        className="loginpage_logo"
+      />
       <div className="login__wrapper user-select-none">
         <Typography align="center" variant="h5">
           {isLogin ? "SIGN IN" : "SIGN UP"}

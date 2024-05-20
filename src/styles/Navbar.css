@@ -14,10 +14,21 @@
 .navbar__logo,
 .navbar__avatar{
     object-fit: contain;
-    width: 1.6rem !important;
-    height: 1.6rem !important;
+    min-width: 1.7rem !important;
+    min-height: 1.7rem !important;
+    width: 4vw !important;
+    height: 4vw !important;
+    max-width: 2.5rem !important;
+    max-height: 2.5rem !important;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.navbar__optionIcon{
+    padding: 4px !important;
+    margin: 5px !important;
+    background-image: linear-gradient(90deg,#f87575 0%, #5c95ff 30%, #f87575 100%);
+	animation:slidebg 30s cubic-bezier(0.86, 0, 0.07, 1) infinite;
 }
 
 .navbar__center{
@@ -37,6 +48,7 @@
 
 .navbar__link--active{
     opacity: 1;
+    color: var(--accentColor);
 }
 
 .navbar__link:hover{
@@ -57,9 +69,15 @@
     font-size: 0.8rem;
 }
 
+@keyframes slidebg {
+    to {
+      background-position:400px;
+    }
+  }
+
 @media screen and (max-width:600px){
     .navbar{
-        padding: 0.4rem 0.5rem;
+        /* padding: 0.4rem 0.5rem; */
     }
     .navbar__linkSpan{
         display:none;

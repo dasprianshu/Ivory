@@ -24,10 +24,21 @@
   position: relative;
 }
 
+/* duration and running time ----------------------*/
+.player__duration {
+  font-size: 0.8rem;
+  color: rgb(160, 158, 158);
+  user-select: none;
+}
+
 /* Progress Bar--------------------------------- */
 .player__progress {
   width: 90%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
 }
 
 .player__main {
@@ -45,6 +56,7 @@
 .player__song {
   display: flex;
   align-items: center;
+  gap: 1vw;
 }
 
 .song__infoImage {
@@ -84,12 +96,6 @@
   align-items: center;
 }
 
-/* duration and running time ----------------------*/
-.player__duration {
-  font-size: 0.8rem;
-  color: rgb(160, 158, 158);
-  user-select: none;
-}
 
 @media screen and (max-width: 600px) {
   .song__info {
@@ -105,9 +111,6 @@
   .song__infoImage {
     height: 2.2rem;
     width: 2.2rem;
-  }
-  .player__duration {
-    display: none;
   }
   .song__infoArtist,
   .song__infoTrack {

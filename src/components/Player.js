@@ -191,11 +191,13 @@ function Player({ show }) {
   return (
     <div className="player">
       <div className="player__progress">
+        <div className="player__duration">{displayCurrentTime}</div>
         <Slider
           color="secondary"
           value={continuousTime}
           onChangeCommitted={songProgressChanged}
         />
+        <div className="player__duration">{displayDurationTime}</div>
       </div>
 
       <div className="player__main">
@@ -223,11 +225,6 @@ function Player({ show }) {
         <div className="player__left">
           <PlayerSongListButton />
 
-          <div className="player__duration">
-            <span className="duration__current">{displayCurrentTime}</span>
-            <span>/</span>
-            <span className="duration__total">{displayDurationTime}</span>
-          </div>
         </div>
       </div>
 

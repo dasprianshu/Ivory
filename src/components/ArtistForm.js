@@ -129,7 +129,7 @@ function ArtistForm() {
           label="Artist Name"
           required
           fullWidth
-          color="secondary"
+          color="primary"
         />
       </div>
       <div className="admin__formGroup">
@@ -140,7 +140,7 @@ function ArtistForm() {
           label="Description"
           required
           fullWidth
-          color="secondary"
+          color="primary"
         />
       </div>
       <div className="admin__formGroup">
@@ -150,7 +150,7 @@ function ArtistForm() {
           onChange={handleChange}
           label="Image Url (Not needed if uploading image)"
           fullWidth
-          color="secondary"
+          color="primary"
         />
       </div>
       <div className="admin__formGroup">
@@ -158,7 +158,7 @@ function ArtistForm() {
           name="image"
           type="file"
           accept="image/*"
-          color="secondary"
+          color="primary"
           onChange={handleChange}
         />
       </div>
@@ -166,7 +166,7 @@ function ArtistForm() {
         <LinearProgress
           value={progress}
           variant="determinate"
-          color="secondary"
+          color="primary"
         />
       </div>
       {message.text && (
@@ -195,7 +195,7 @@ function ArtistForm() {
         disabled={loading}
         type="submit"
         variant="contained"
-        color="secondary"
+        color="primary"
       >
         Add
       </Button>

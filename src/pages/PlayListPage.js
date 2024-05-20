@@ -30,7 +30,7 @@ function PlayListPage() {
     if (id === "favorites")
       return {
         name: "favorites",
-        imageUrl: "https://prexoo.com/images/no-music-cover.png",
+        imageUrl: "https://static.tumblr.com/qmraazf/ps5mjrmim/unknown-album.png",
       };
     return { name: null, imageUrl: null };
   });

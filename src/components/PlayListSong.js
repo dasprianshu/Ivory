@@ -123,12 +123,7 @@ function PlayListSong({
               >
                 Play Next
               </MenuItem>
-              <MenuItem
-                className="playlistsong__optionsItem"
-                onClick={addToQueue}
-              >
-                Add to Queue
-              </MenuItem>
+              
               {/* If this is from PlaylistPage then show the remove button */}
               {fromPlaylistPage ? (
                 <MenuItem

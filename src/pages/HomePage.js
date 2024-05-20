@@ -26,8 +26,6 @@ function Home() {
         <Typography variant="h4" display="inline">
           {welcomeText}{" "}
         </Typography>
-        &nbsp;
-        <FavoriteBorderIcon className="home__welcomeTextIcon" />
       </div>
 
       <NewReleases />

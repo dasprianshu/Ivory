@@ -14,8 +14,8 @@ function Admin() {
           <Tabs
             value={tab}
             onChange={(e, newValue) => setTab(newValue)}
-            indicatorColor="secondary"
-            textColor="secondary"
+            indicatorColor="primary"
+            textColor="primary"
             centered
           >
             <Tab label="Add Song" />

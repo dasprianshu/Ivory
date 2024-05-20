@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, IconButton, Avatar } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
@@ -98,7 +99,7 @@ function Navbar() {
 
       <div className="navbar__right">
         <IconButton
-          className="song__optionIcon"
+          className="navbar__optionIcon" //here will be be a isArtist state check
           aria-controls="simple-menu"
           aria-haspopup="true"
           onClick={openOptions}
@@ -124,6 +125,10 @@ function Navbar() {
           open={Boolean(anchorEl)}
           onClose={() => setAnchorEl(false)}
         >
+          <MenuItem onClick={() => navigate("/profile")}>
+            <PersonOutlineIcon fontSize="small" />
+            <span className="navbar__rightMenuItem">Your Profile</span>
+          </MenuItem>
           <MenuItem onClick={logout}>
             <ExitToAppIcon fontSize="small" />
             <span className="navbar__rightMenuItem">Logout</span>

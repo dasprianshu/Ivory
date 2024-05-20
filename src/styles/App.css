@@ -1,9 +1,10 @@
 :root{
-    --bgColor : #212121;
-    --playerBgColor:#424242;
-    --songBgColor:#292929;
-    --songHoverBgColor:#393939;
+    --bgColor : #121212;
+    --playerBgColor:#000000;
+    --songBgColor:#0d0d0d;
+    --songHoverBgColor:#1e1e1e;
     --textColor: whitesmoke;
+    --accentColor: #b9e6ff;
 }
 .app{
     width: 100%;

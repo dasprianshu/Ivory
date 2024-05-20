@@ -30,18 +30,20 @@ function Song({ data }) {
 
   return (
     <div className="song">
-      <img src={data.imageUrl} alt="" className="song__image" />
-      <p className="song__name" title={data.name}>
-        {data.name}
-      </p>
-      <p className="song__artist" title={data.artist}>
-        {data.artist}
-      </p>
-      <div className="song__playButton">
+      <div onClick={playSong} style={{cursor: "pointer"}}>
+        <img src={data.imageUrl} alt="" className="song__image" />
+        <p className="song__name" title={data.name}>
+          {data.name}
+        </p>
+        <p className="song__artist" title={data.artist}>
+          {data.artist}
+        </p>
+      </div>
+      {/* <div className="song__playButton">
         <IconButton className="song__playIcon" onClick={playSong}>
           <PlayCircleFilledWhiteIcon style={{ fill: "#F22C89" }} />
         </IconButton>
-      </div>
+      </div> */}
       <div className="song__option">
         <IconButton
           className="song__optionIcon"

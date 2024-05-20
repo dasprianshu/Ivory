@@ -1,0 +1,52 @@
+.profilepage{
+  padding: 1rem;
+  color: var(--textColor);
+}
+
+.profilepage__header{
+	margin: 1rem;
+}
+
+.profilepage__headerInfo {
+  display: flex;
+  align-items:baseline;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profilepage__image {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  align-self: self-start;
+}
+
+.profilepage__joinArtistButton{
+	width: 80vw;
+	max-width: 500px;
+
+}
+
+.rainbow:hover, .rainbow:active{
+	background-image: linear-gradient(90deg,#f87575 0%, #5c95ff 50%, #f87575 100%);
+	animation:rainbowSlide 30s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+	color: white;
+	font-weight: 700;
+}
+
+@keyframes rainbowSlide {
+  to {
+    background-position:4000px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profilepage__headerInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profilepage__headerInfoText {
+    margin: 0;
+  }
+}

@@ -18,8 +18,8 @@
   margin-left: 0.5rem;
   max-height: 30vh;
   overflow: auto;
-  /* scrollbar-width: thin; */
-  scrollbar-color: rgb(87, 87, 87) rgb(35, 35, 35);
+  scrollbar-color: rgb(59, 59, 59) rgb(0, 0, 0);
+  scrollbar-width: thin;
 }
 
 .artistpage__image {
@@ -34,17 +34,28 @@
   margin-top: 1rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   grid-gap: 1rem;
   padding-left: 1rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .artistpage__headerInfo {
     flex-direction: column;
     align-items: flex-start;
   }
   .artistpage__headerInfoText {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .artistpage__songlist {
+    padding-left: 0.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  }
+  .artistpage__header {
+    margin-left: 0.1rem;
   }
 }

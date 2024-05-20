@@ -93,7 +93,7 @@ function SongForm() {
               data.url = url; // adding the recived Url
               await addSong(data).catch(handleError);
               setMessage({
-                type: "textPrimary",
+                type: "textsecondary",
                 text: "Song added",
               });
               clearForm();
@@ -104,7 +104,7 @@ function SongForm() {
     } else if (data.url) {
       await addSong(data).catch(handleError);
       setMessage({
-        type: "textPrimary",
+        type: "textsecondary",
         text: "Song added",
       });
       clearForm();
@@ -131,12 +131,12 @@ function SongForm() {
           label="Song Name"
           required
           fullWidth
-          color="secondary"
+          color="primary"
         />
       </div>
       <div className="admin__fromGroup" style={{ paddingTop: "0.5rem" }}>
         <FormControl fullWidth>
-          <InputLabel htmlFor="artist" color="secondary">
+          <InputLabel htmlFor="artist" color="primary">
             Artist
           </InputLabel>
           <Select
@@ -144,7 +144,7 @@ function SongForm() {
             name="artist"
             onChange={handleChange}
             value={formData.artist}
-            color="secondary"
+            color="primary"
             fullWidth
             required
           >
@@ -165,7 +165,7 @@ function SongForm() {
           label="Image Url"
           required
           fullWidth
-          color="secondary"
+          color="primary"
         />
       </div>
       <div className="admin__formGroup">
@@ -175,7 +175,7 @@ function SongForm() {
           onChange={handleChange}
           label="Audio Url(Not needed if uploading Song)"
           fullWidth
-          color="secondary"
+          color="primary"
         />
       </div>
       <div className="admin__formGroup">
@@ -183,7 +183,7 @@ function SongForm() {
           name="file"
           type="file"
           accept="audio/mp3,audio/*;"
-          color="secondary"
+          color="primary"
           onChange={handleChange}
         />
       </div>
@@ -191,7 +191,7 @@ function SongForm() {
         <LinearProgress
           value={progress}
           variant="determinate"
-          color="secondary"
+          color="primary"
         />
       </div>
       {message.text && (
@@ -221,7 +221,7 @@ function SongForm() {
         disabled={loading}
         type="submit"
         variant="contained"
-        color="secondary"
+        color="primary"
       >
         Add
       </Button>
