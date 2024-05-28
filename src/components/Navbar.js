@@ -50,7 +50,7 @@ function Navbar() {
     <div className="navbar">
       <img
         className="navbar__logo"
-        src="https://raw.githubusercontent.com/dasprianshu/Ivory/fee73f679d42f5382c91f15beb35634e7ce6f4fb/public/favicon.ico"
+        src="https://firebasestorage.googleapis.com/v0/b/ivory-7da2e.appspot.com/o/IvoryLogo.png?alt=media&token=53810393-c18e-475f-8b88-1b93bffc72c9"
         alt="App Logo"
         onDoubleClick={() => navigate("/admin")}
       />

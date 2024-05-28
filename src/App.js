@@ -19,6 +19,8 @@ const LibraryPage = lazy(() => import("./pages/LibraryPage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 const SearchPage = lazy(() => import("./pages/SearchPage"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage"));
+const RegisterPage = lazy(() => import("./pages/RegisterPage"));
+
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -43,6 +45,7 @@ function App() {
                     path="/playlists/:id"
                     element={<PlayListPage />}
                   />
+                  <Route exact path="/register-as-an-artist" element={<RegisterPage />} />
                   <Route exact path="/profile" element={<ProfilePage />} />
                   <Route exact path="/search" element={<SearchPage />} />
                   <Route exact path="/artist/:id" element={<ArtistPage />} />

@@ -80,7 +80,7 @@ function Login() {
   return (
     <div className="login user-select-none">
       
-      <img src="https://firebasestorage.googleapis.com/v0/b/ivory-7da2e.appspot.com/o/Ivory_logo.png?alt=media&token=f3ea5a13-af48-4b82-8177-02b5b8f405e6"
+      <img src="https://firebasestorage.googleapis.com/v0/b/ivory-7da2e.appspot.com/o/Ivory_logo.png?alt=media&token=853c924d-f769-40ea-87dc-62bf0acab751"
         alt="App-Logo"
         className="loginpage_logo"
       />

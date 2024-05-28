@@ -1,4 +1,5 @@
 import { getAuth } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import { Typography, Button } from "@material-ui/core";
@@ -8,13 +9,11 @@ import "../styles/ProfilePage.css";
 function ProfilePage() {
 	const [isArtist, setIsArtist] = useState(false);
 	// const [artist, setArtist] = useState(null);
+	const navigate = useNavigate();
 	const lorem = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
 	const auth = getAuth();
 	const user = auth.currentUser;
-	if (user) {
-		console.log(user); //<<<<<<<<<<<<<<<<<<
-	} else {
-	}
+	
   return ( 
     <div className="profilepage">
       {user ? (
@@ -40,16 +39,19 @@ function ProfilePage() {
 						</Button>
 					</div>
 					<br></br>
-					<br></br>
-					<div className="profilepage__headerInfo">
-						<Button
-	            variant="contained"
-	            color="secondary"
-							className="profilepage__joinArtistButton rainbow"
-	          >
-							<Typography variant="subtitles" >Register as an artist</Typography>
-						</Button>
-					</div>
+					{!isArtist && 
+						(<div className="profilepage__headerInfo">
+							<br></br>
+							<Button
+		            variant="contained"
+		            color="secondary"
+								className="profilepage__joinArtistButton rainbow"
+								onClick={() => {navigate("/register-as-an-artist")}}
+		          >
+								<Typography variant="subtitles" >Register as an artist</Typography>
+							</Button>
+						</div>)
+					}
         </div>
       ) : (
 				<Typography variant="h4">You are not signed in</Typography>
