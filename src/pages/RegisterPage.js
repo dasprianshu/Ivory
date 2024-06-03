@@ -20,7 +20,7 @@ import {
 function RegisterPage() {
   const auth = getAuth();
 	const user = auth.currentUser;
-  // console.log(user);
+
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [message, setMessage] = useState({ type: "", text: "" });
@@ -178,7 +178,7 @@ function RegisterPage() {
         {message.text && (
           <div
             className="register__formGroup register__formMessage"
-            style={{ backgroundColor: "#f5f5f5" }}
+            style={{ backgroundColor: "#121212" }}
           >
             <Typography color={message.type} variant="subtitle1">
               <strong>{message.text}</strong>
@@ -210,7 +210,6 @@ function RegisterPage() {
           >
             Add
           </Button>
-
         </div>
       </form>
     </div>
